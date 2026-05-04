@@ -1,0 +1,2390 @@
+{
+  "generatedAt": "2026-05-03T14:55:42.820Z",
+  "sourceFile": "APA  University Country Theme Month Year Program Info Collection - Internal Info Collection.xlsx",
+  "pageTitle": "Internal Information Collection",
+  "pageSubtitle": "APA program info collection (imported layout)",
+  "sheets": [
+    {
+      "name": "Checklist",
+      "sections": [
+        {
+          "id": "Checklist__r1",
+          "sheetName": "Checklist",
+          "excelHeaderRow": 1,
+          "minCol": 1,
+          "maxCol": 9,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "",
+              "backgroundColor": null
+            },
+            {
+              "text": "Process Check list",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Note/Status/Date",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Summary Checklist",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Note/Status/Date",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Onsite Preparation",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Note/Status/Date",
+              "backgroundColor": "#EA9999"
+            }
+          ],
+          "rows": [
+            [
+              "false",
+              "Participant Number",
+              "eg. Processing, not executed, confirmed 14 students (7m+7f) and 2 faculty",
+              "false",
+              "Accommodation",
+              "",
+              "false",
+              "Travefy",
+              "insert link here"
+            ],
+            [
+              "",
+              "",
+              "",
+              "false",
+              "Meeting Room",
+              "upload file to Stage II & Insert link",
+              "false",
+              "Greeting Sign",
+              "insert link here"
+            ],
+            [
+              "false",
+              "Faculty Leader Questionaire",
+              "Insert link here",
+              "false",
+              "Academic visit",
+              "upload file to Stage II",
+              "false",
+              "Materials Printing (Rooming list, Name List, Insurance, Meeting Room Reservation, etc)",
+              ""
+            ],
+            [
+              "false",
+              "Personal Information",
+              "Insert link here",
+              "false",
+              "CTC (Flight, Train, Ferry)+Luggage Transfer",
+              "upload file to Stage II (CTC flight, etc.)\ne.g. 新干线票未定",
+              "false",
+              "Cash ready",
+              ""
+            ],
+            [
+              "false",
+              "Passport Copies",
+              "Insert link here",
+              "false",
+              "Daily Transportation",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Flight Information",
+              "Insert link here",
+              "false",
+              "Guide",
+              "",
+              "false",
+              "Group Chat with Faculty/Students",
+              ""
+            ],
+            [
+              "false",
+              "Participant Contract",
+              "Insert link here",
+              "false",
+              "Culture",
+              "upload file to Stage II",
+              "false",
+              "Group Chat with Guide",
+              ""
+            ],
+            [
+              "false",
+              "Rooming List",
+              "Insert link here",
+              "false",
+              "Meals",
+              "",
+              "false",
+              "WeChat with Internal Team",
+              ""
+            ],
+            [
+              "false",
+              "University Insurance",
+              "Insert link here",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "false",
+              "Welcome Gifts Preparation",
+              "Insert link here",
+              "false",
+              "Welcome gift check",
+              ""
+            ],
+            [
+              "false",
+              "1st Invoice",
+              "N/A",
+              "false",
+              "Head Set",
+              "",
+              "false",
+              "IC Card/Shinkansen/Train Ticket Transition",
+              ""
+            ],
+            [
+              "false",
+              "2nd Invoice",
+              "Received",
+              "false",
+              "Orientation Slides",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "3rd Invoice",
+              "Sent",
+              "",
+              "",
+              "",
+              "false",
+              "Student Feedback Form (google)",
+              "insert link here"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "false",
+              "Faculty Leader Feedback Form (.doc)",
+              "insert link here"
+            ],
+            [
+              "false",
+              "1st Internal Meeting",
+              "e.g. scheduled on Jan 10",
+              "",
+              "",
+              "",
+              "false",
+              "Student Feedback Report",
+              "insert link here"
+            ],
+            [
+              "false",
+              "2nd Internal Meeting",
+              "e.g. scheduled on Mar 10",
+              "",
+              "",
+              "",
+              "false",
+              "FM",
+              "insert link here"
+            ],
+            [
+              "false",
+              "3rd Internal Meeting",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Pre-departure Meeting (Faculty/Students)",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Onsite Transition Meeting",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Guide-PM Meeting",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "OM-Guide Info Transition",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Optional Activity Name List",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Program Updates Email (accommodation, itinerary/travefy, cp)",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "false",
+              "Key to Success/Final Updates Email",
+              "insert link here",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "sections": [
+        {
+          "id": "Summary__r1",
+          "sheetName": "Summary",
+          "excelHeaderRow": 1,
+          "minCol": 1,
+          "maxCol": 11,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "University Name",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Program Name & Theme",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Year",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Arrival Date",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Departure Date",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Duration",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Countries/Regions",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Cities",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "PM",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "1st invoice",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "2nd invoice",
+              "backgroundColor": "#EA9999"
+            }
+          ],
+          "rows": [
+            [
+              "University of Florida",
+              "Business",
+              "2025",
+              "2025-07-12T00:00:00.000Z",
+              "2025-08-09T00:00:00.000Z",
+              "28",
+              "Japan",
+              "Tokyo, Kyoto",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "id": "Summary__r3",
+          "sheetName": "Summary",
+          "excelHeaderRow": 3,
+          "minCol": 1,
+          "maxCol": 5,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Students",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Faculty",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Guide",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "APA Onsite",
+              "backgroundColor": "#EA9999"
+            },
+            {
+              "text": "Guest",
+              "backgroundColor": "#EA9999"
+            }
+          ],
+          "rows": [
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "id": "Summary__r8",
+          "sheetName": "Summary",
+          "excelHeaderRow": 8,
+          "minCol": 1,
+          "maxCol": 12,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Travel Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Preferred Time Slot",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "ETD-ETA",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Way of Travel",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget (Per Person)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Total Number",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Final Option",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Unit Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Note",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "2025-07-25T00:00:00.000Z",
+              "NOZOMI 233 10:21-12:32",
+              "Kyoto-Tokyo",
+              "High Speed Train",
+              "120",
+              "add pax number",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "2025-07-27T00:00:00.000Z",
+              "NOZOMI 406 15:13-17:24",
+              "Kyoto-Tokyo",
+              "High Speed Train",
+              "120",
+              "[object Object]",
+              "add 2 LI guests",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "2025-07-28T00:00:00.000Z",
+              "",
+              "Tokyo hotel-NRT Airport",
+              "Luggage transfer",
+              "30",
+              "N/A",
+              "arrive on 7/29",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "City-To-City Transfer"
+        },
+        {
+          "id": "Summary__r17",
+          "sheetName": "Summary",
+          "excelHeaderRow": 17,
+          "minCol": 1,
+          "maxCol": 12,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Countries/Regions",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Cities",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Check-in Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Check-out Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Night #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Breakfast",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget (Per Room)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Acutal Option",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-10T00:00:00.000Z",
+              "2025-08-09T00:00:00.000Z",
+              "30",
+              "YES",
+              "150",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-12T00:00:00.000Z",
+              "2025-08-09T00:00:00.000Z",
+              "28",
+              "NO",
+              "150",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Accommodation",
+          "tableSubtitle": "Please only reflect group staying dates. For special requests (OG, guest, guide, faculty) reflect in the Rooming List section."
+        },
+        {
+          "id": "Summary__r23",
+          "sheetName": "Summary",
+          "excelHeaderRow": 23,
+          "minCol": 1,
+          "maxCol": 14,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Countries/Regions",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Cities",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Purpose/Layout",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Time Slots",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget (Per time or Per hour?)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Capacity (Number of pax, etc)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Equipments",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Speciacl Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Actual Option",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Note",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "Orientation",
+              "2025-07-13T00:00:00.000Z",
+              "2-4pm",
+              "30",
+              "20-30",
+              "Projector, Screen, Speaker, Microphone, White Board",
+              "near hotel",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "Class session",
+              "2025-07-15T00:00:00.000Z",
+              "9:30-12:30am",
+              "400",
+              "20-30",
+              "Projector, Screen",
+              "near hotel",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "CP Lecture",
+              "2025-07-15T00:00:00.000Z",
+              "9:30-12:30am",
+              "400",
+              "20-30",
+              "White Board, Microphone",
+              "preferred location",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Meeting Room"
+        },
+        {
+          "id": "Summary__r36",
+          "sheetName": "Summary",
+          "excelHeaderRow": 36,
+          "minCol": 1,
+          "maxCol": 13,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Country",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "City",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Duration",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Itinerary",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Supplier",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Bus Type (Seat Number)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Notes (actual usage)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "",
+              "",
+              "",
+              "IC CARD",
+              "100",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-10T00:00:00.000Z",
+              "AM",
+              "airport pickup",
+              "1100",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-12T00:00:00.000Z",
+              "AM, PM",
+              "Airport Pickup",
+              "1400",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo-Mt. Fuji-Tokyo",
+              "2025-08-01T00:00:00.000Z",
+              "Full Day",
+              "Mt Fuji",
+              "1600",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-08-09T00:00:00.000Z",
+              "Full Day",
+              "Airport Dropoff",
+              "1400",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Daily Transportation"
+        },
+        {
+          "id": "Summary__public_transportation_card",
+          "sheetName": "Summary",
+          "excelHeaderRow": null,
+          "minCol": 1,
+          "maxCol": 5,
+          "titleAbove": [],
+          "tableName": "Public Transportation Card",
+          "columns": [
+            {
+              "text": "Country",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "City",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Local Currency",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Deposit",
+              "backgroundColor": "#D9EAD3",
+              "inputType": "select",
+              "selectOptions": [
+                "Included",
+                "Not included"
+              ]
+            }
+          ],
+          "rows": [
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "id": "Summary__r46",
+          "sheetName": "Summary",
+          "excelHeaderRow": 46,
+          "minCol": 1,
+          "maxCol": 12,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Countries",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Cities",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Duration",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Itinerary",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget \n(including tips)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Guide Information (Full Name-Mr./Ms., Email Add, Phone Numer)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Notes (Actual Use)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-12T00:00:00.000Z",
+              "Late EVE, Full Day",
+              "Airport Transfer",
+              "330",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-13T00:00:00.000Z",
+              "AM",
+              "Orientation & Walking around the hotel +dinner",
+              "350",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-18T00:00:00.000Z",
+              "Full Day",
+              "One-day Trip to Kamakura",
+              "350",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-24T00:00:00.000Z",
+              "Full Day",
+              "PM: Company Visit",
+              "330",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-31T00:00:00.000Z",
+              "Full Day",
+              "AM: Company Visit",
+              "330",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Guide"
+        },
+        {
+          "id": "Summary__r55",
+          "sheetName": "Summary",
+          "excelHeaderRow": 55,
+          "minCol": 1,
+          "maxCol": 13,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Countries",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Cities",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Duration",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Cultural Activity Name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget (Per Person)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Who Booked",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Reservation Information (Venue/Vendor, Time, Address in English+Japanese/Korean, Pax)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-13T00:00:00.000Z",
+              "PM",
+              "Team labs bordless",
+              "40",
+              "下午2：30pm",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-14T00:00:00.000Z",
+              "AM",
+              "Meiji Jingu",
+              "0",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-15T00:00:00.000Z",
+              "Full Day",
+              "Tokyo Tower",
+              "5",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-16T00:00:00.000Z",
+              "EVE",
+              "cooking class",
+              "85",
+              "11,000yen",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Malaysia",
+              "KL",
+              "2025-07-18T00:00:00.000Z",
+              "AM",
+              "Twin Tower (outside only)",
+              "0",
+              "Outside only",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Malaysia",
+              "KL",
+              "2025-07-19T00:00:00.000Z",
+              "AM",
+              "Twin Tower (inside)",
+              "25",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Cultural Experiences"
+        },
+        {
+          "id": "Summary__r65",
+          "sheetName": "Summary",
+          "excelHeaderRow": 65,
+          "minCol": 1,
+          "maxCol": 13,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Country",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "City",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Starting Time",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Meal Type",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget (Per Person)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Note \n(Cuisine, Location)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Who Booked",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OM Option (Restaurant Name-ENG+Local Language/ Address/ Phone, Time, Pax）",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Menu",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Actual Cost",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost Information (Method, Who Pay, Payment Status)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "OG Feedback",
+              "backgroundColor": "#DDD9C3"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-13T00:00:00.000Z",
+              "07:00 PM",
+              "Welcome Dinner",
+              "50",
+              "Near Hotel",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-14T00:00:00.000Z",
+              "12:00 PM",
+              "Normal Lunch",
+              "20",
+              "Traditional Japanese Food, near Meiji Jingu",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Meals"
+        }
+      ]
+    },
+    {
+      "name": "Itinerary",
+      "sections": [
+        {
+          "id": "Itinerary (template)请修改这个__r1",
+          "sheetName": "Itinerary",
+          "excelHeaderRow": 1,
+          "minCol": 1,
+          "maxCol": 7,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "[Program Name] Itinerary",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "[Program Name] Itinerary",
+              "backgroundColor": null
+            },
+            {
+              "text": "[Program Name] Itinerary",
+              "backgroundColor": null
+            },
+            {
+              "text": "[Program Name] Itinerary",
+              "backgroundColor": null
+            },
+            {
+              "text": "[Program Name] Itinerary",
+              "backgroundColor": null
+            },
+            {
+              "text": "OG Note",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "OG Payment",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": [
+            [
+              "",
+              "",
+              "*：请将contact information/address/reservation information填在此列",
+              "*：请将contact information/address/reservation information填在此列",
+              "*：请将contact information/address/reservation information填在此列",
+              "",
+              "Paymet Sum:"
+            ],
+            [
+              "*复制itinerary 到这里",
+              "*复制itinerary 到这里",
+              "*复制itinerary 到这里",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Academic",
+      "sections": [
+        {
+          "id": "Academic__r2",
+          "sheetName": "Academic",
+          "excelHeaderRow": 2,
+          "minCol": 1,
+          "maxCol": 9,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Country",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "City in proposal",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date in Proposal",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Duration (AM/PM) in proposal",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Type",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Options in Contract /Notes from University",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Who Arrange",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Budget",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Academic Manager",
+              "backgroundColor": "#FCE5CD"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-13T00:00:00.000Z",
+              "AM",
+              "local faculty",
+              "local faculty",
+              "APA",
+              "USD 500",
+              "Kiki"
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-15T00:00:00.000Z",
+              "AM",
+              "Company Visit",
+              "us embassy",
+              "Faculty",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-17T00:00:00.000Z",
+              "AM",
+              "Consulting Project",
+              "the case we've shared from Morgan",
+              "APA",
+              "USD 500",
+              "Kiki"
+            ]
+          ],
+          "tableName": "Requests"
+        },
+        {
+          "id": "Academic__r9",
+          "sheetName": "Academic",
+          "excelHeaderRow": 9,
+          "minCol": 1,
+          "maxCol": 14,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "Country",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "City",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Date",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Specific Time",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Host",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Status",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Host Intro",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Key Contact \n(including phone/email, etc.)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Address \n(Meeting Point, Company Add, Meeting Room Add)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Agenda & Delegation",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Budget",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Cost \n(Amount, Method, Who pay)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "On-site Feedbacks",
+              "backgroundColor": "#EAD1DC"
+            }
+          ],
+          "rows": [
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-13T00:00:00.000Z",
+              "",
+              "",
+              "In talk",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-15T00:00:00.000Z",
+              "",
+              "",
+              "Not start",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Japan",
+              "Tokyo",
+              "2025-07-17T00:00:00.000Z",
+              "",
+              "",
+              "Comfirm",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "tableName": "Outreach Status"
+        }
+      ]
+    },
+    {
+      "name": "CTC",
+      "sections": [
+        {
+          "id": "CTC__r2",
+          "sheetName": "CTC",
+          "excelHeaderRow": 2,
+          "minCol": 1,
+          "maxCol": 6,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "No.",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Last name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Given name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Reference #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Ticket #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Note",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": []
+        },
+        {
+          "id": "CTC__r6",
+          "sheetName": "CTC",
+          "excelHeaderRow": 6,
+          "minCol": 1,
+          "maxCol": 7,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "No.",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Last name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Given name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Car #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Seat #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Confirmation #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Note",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "name": "Personal Info",
+      "sections": [
+        {
+          "id": "Personal Info__r2",
+          "sheetName": "Personal Info",
+          "excelHeaderRow": 2,
+          "minCol": 1,
+          "maxCol": 20,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "#",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Last Name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "First Name +Middle Name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Date of Birth\n(dd-mm-yyyy)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Gender",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Nationality",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Passport #",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Passport Expire Date\n(mm/dd/yyyy)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Level\n(student)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Major",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Email",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Phone Number",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "First & Second Language",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Current & Previous Health Conditions",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Allergies and Food Restriction",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Disability/Accommodation",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Emergency Contact Name (1)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Relationship (1)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Emergency Contac(1):",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Emergency Contact Email (1)",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": [],
+          "headerLabelsEditable": true,
+          "allowRowInsert": true
+        }
+      ]
+    },
+    {
+      "name": "Rooming List",
+      "sections": [
+        {
+          "id": "Rooming List__combined",
+          "sheetName": "Rooming List",
+          "excelHeaderRow": 4,
+          "minCol": 1,
+          "maxCol": 11,
+          "titleAbove": [],
+          "tableName": "UF Business Japan July 2025 Hotel Name List",
+          "editableTableName": true,
+          "headerLabelsEditable": true,
+          "bannerTextFields": [
+            {
+              "text": "the b Akasaka-Mitsuke, Tokyo",
+              "variant": "tableName"
+            },
+            {
+              "text": "Address: 3 Chome-21-7 Akasaka, Minato City, Tokyo 107-0052, Japan",
+              "variant": "tableName"
+            }
+          ],
+          "columns": [
+            {
+              "text": "#",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Room Type",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Room No.",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Last Name",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "First Name",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Gender",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Nationality",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Special Notes",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Check-in",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Check-out",
+              "backgroundColor": "#EAF1DD"
+            },
+            {
+              "text": "Internal Reference",
+              "backgroundColor": "#FCE5CD"
+            }
+          ],
+          "rows": [
+            [
+              "1",
+              "1 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "2",
+              "1 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "3",
+              "2 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "4",
+              "2 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "5",
+              "3 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "6",
+              "3 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "7",
+              "4 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "8",
+              "4 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "9",
+              "5 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "10",
+              "5 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "11",
+              "6 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "12",
+              "6 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "13",
+              "7 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "14",
+              "7 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "15",
+              "8 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "16",
+              "8 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "17",
+              "9 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "18",
+              "9 Twin",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "19",
+              "1 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "20",
+              "2 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "Student"
+            ],
+            [
+              "21",
+              "3 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "vip-higher floor",
+              "",
+              "",
+              "Facutly"
+            ],
+            [
+              "22",
+              "4 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "vip-higher floor",
+              "",
+              "",
+              "APA OG"
+            ],
+            [
+              "23",
+              "5 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "vip-higher floor",
+              "",
+              "",
+              "Guest"
+            ],
+            [
+              "24",
+              "6 Double",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "vip-higher floor",
+              "",
+              "",
+              "Guide"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "International Flight",
+      "sections": [
+        {
+          "id": "International Flight__pickup_title",
+          "sheetName": "International Flight",
+          "excelHeaderRow": null,
+          "displayMode": "tableNameOnly",
+          "tableName": "Airport Pickup Information",
+          "titleAbove": [],
+          "columns": [],
+          "rows": []
+        },
+        {
+          "id": "International Flight__r3",
+          "sheetName": "International Flight",
+          "excelHeaderRow": 3,
+          "minCol": 1,
+          "maxCol": 13,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "#",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "First Name",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Last Name",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Arrival Airport",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Arrival Date to Tokyo",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Arrival Time to Tokyo",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Arrival Airline & Flight #",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Arrival Terminal",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Pickup person & phone number",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Pick up Time & Point",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Number of pax",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Private Coach Information (Driver contact&Name, Car Plate, Company name&contact)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Notes",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": []
+        },
+        {
+          "id": "International Flight__r12",
+          "sheetName": "International Flight",
+          "excelHeaderRow": 12,
+          "minCol": 1,
+          "maxCol": 13,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "#",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "First Name",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Last Name",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Departure Airport",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Departure Date From Tokyo",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Flight Departure Time",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Departure Airline & Flight #",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Departure Terminal",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Dropoff person & phone number",
+              "backgroundColor": "#B6D7A8"
+            },
+            {
+              "text": "Dropoff Terminal",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Number of pax",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Private Coach Information (Driver contact&Name, Car Plate, Company name&contact)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Note",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": [],
+          "tableName": "Airport Drop off Information"
+        },
+        {
+          "id": "International Flight__group_flight_title",
+          "sheetName": "International Flight",
+          "excelHeaderRow": null,
+          "displayMode": "tableNameOnly",
+          "tableName": "Group flight information",
+          "titleAbove": [],
+          "columns": [],
+          "rows": []
+        },
+        {
+          "id": "International Flight__r19",
+          "sheetName": "International Flight",
+          "excelHeaderRow": 19,
+          "minCol": 1,
+          "maxCol": 8,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "No.",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Last name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "first name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Middle name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Arriving Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Arriving Singapore Time",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Airline",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Terminal",
+              "backgroundColor": "#D9EAD3"
+            }
+          ],
+          "rows": []
+        },
+        {
+          "id": "International Flight__r25",
+          "sheetName": "International Flight",
+          "excelHeaderRow": 25,
+          "minCol": 1,
+          "maxCol": 10,
+          "titleAbove": [],
+          "columns": [
+            {
+              "text": "No.",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Last name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Given name",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Arrival Date",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Arrival Time (Local)",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Airline",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Terminal",
+              "backgroundColor": "#D9EAD3"
+            },
+            {
+              "text": "Reference # (or Ticket #)",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Luggage",
+              "backgroundColor": "#FCE5CD"
+            },
+            {
+              "text": "Unit Cost",
+              "backgroundColor": "#FCE5CD"
+            }
+          ],
+          "rows": []
+        }
+      ]
+    }
+  ]
+}

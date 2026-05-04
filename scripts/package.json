@@ -1,0 +1,11 @@
+{
+  "name": "studytour-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-layout": "node generate-internal-info-layout.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
