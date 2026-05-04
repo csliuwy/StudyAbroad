@@ -52,6 +52,8 @@ export interface ItineraryDay {
 
 export interface ItineraryVersion {
   id: string;
+  /** Owning project (used for persistence and cascade delete). */
+  projectId: string;
   version: number;
   createdAt: string;
   isProposal: boolean;
@@ -123,4 +125,8 @@ export interface StudyTourProject {
   latestItineraryVersionId: string;
   partnerViewNote?: string;
   travelerViewNote?: string;
+  /** Secret token for read-only partner audience API (query param `token`). */
+  partnerViewToken: string;
+  /** Secret token for read-only traveler audience API (query param `token`). */
+  travelerViewToken: string;
 }

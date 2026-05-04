@@ -29,6 +29,7 @@ lerna-debug.log*
 
 # --- 本地上传与用户数据 ---
 backend/uploads/
+backend/data/
 
 # --- 测试覆盖率 ---
 coverage/

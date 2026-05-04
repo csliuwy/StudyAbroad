@@ -5,7 +5,7 @@ import { createProjectRouter } from "./routes/projects.js";
 import { TravefyClient } from "./integrations/travefy/client.js";
 import { WetuClient } from "./integrations/wetu/client.js";
 import { PublishService } from "./services/publishService.js";
-import { ResearchQueue } from "./services/researchQueue.js";
+import { createSearchProvider, ResearchQueue } from "./services/researchQueue.js";
 
 dotenv.config();
 
@@ -33,7 +33,7 @@ const travefyClient = new TravefyClient({
 });
 
 const publishService = new PublishService(travefyClient, new WetuClient());
-const researchQueue = new ResearchQueue();
+const researchQueue = new ResearchQueue(createSearchProvider());
 
 app.get("/health", (_req, res) => {
   res.json({ ok: true, service: "studytour-backend" });

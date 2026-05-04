@@ -2,6 +2,8 @@
 
 > 用途：追踪每次改动的功能与涉及文件，便于回顾与手工恢复。完整代码以仓库为准；恢复某版本请优先使用 **Git** 检出对应提交。
 
+**协作约定（给后续对话 / 助手）**：实现功能或回答问题前，应**经常重新阅读本文件**，核对版本摘要与用户曾下达的指令、术语，避免遗忘。每完成一轮**用户可见**或**默认数据/布局**相关改动，按下方「版本号约定」**追加新版本小节**（命名清晰、可回溯）。
+
 ---
 
 ## 1.0 — 基线（本文件建立前的能力摘要）
@@ -95,7 +97,7 @@
 
 ---
 
-## 1.3 — IIC 本机保存、页头精简、列宽与单元格内边距（当前）
+## 1.3 — IIC 本机保存、页头精简、列宽与单元格内边距
 
 **日期**：2026-05-03
 
@@ -117,6 +119,32 @@
 | `frontend/src/pages/InternalInformationCollectionPage.tsx` | `applyOverlay` / `collectPersistFromPage`；`data-iic-section` / `data-iic-field`；保存按钮与 `localStorage`；`measureHeaderTextWidthPx`；`SectionTable` 初始列宽逻辑 |
 | `frontend/src/styles.css` | `.iic-page-toolbar`、`.iic-save-*`；`.iic-cell-input` 内边距 |
 | `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
+## 1.4 — 对话术语约定 + 版本文档维护指令（当前）
+
+**日期**：2026-05-04
+
+### 功能 / 范围
+
+1. **用户与助手对话中的统一称呼（术语表，本地开发默认）**  
+   - **`http://localhost:5180`**（StudyTour Ops 根路由 `/`）：简称 **「系统」**、**「系统主页」**、**「主页」** 或 **「home page」**。  
+   - **`http://localhost:5180/projects/:projectId/modules/internal-information-collection`**（示例：`…/projects/project_spq16sv4/modules/…`）：简称 **「IIC页」** 或 **「IIC」**（即 Internal Information Collection 模块页）。
+2. **版本记录**  
+   以后每改一个版本，均在本文件按 **1.1、1.2…** 同样结构**追加一节**：版本命名清晰、便于 Git/手工回溯；总结功能与涉及文件。
+3. **防遗忘**  
+   助手在持续迭代中应**经常重读**本文件，对照历史小节与用户指令，避免遗漏约定（含上表术语）。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `doc/VERSION_HISTORY.md` | 本版本：术语表 + 协作维护说明 |
 
 ### 恢复提示
 
