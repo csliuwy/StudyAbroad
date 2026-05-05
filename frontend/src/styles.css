@@ -53,10 +53,15 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  line-height: 0;
 }
 
 .site-brand-with-mark:hover {
   text-decoration: none;
+}
+
+.site-brand-text {
+  line-height: 1.2;
 }
 
 .site-brand-with-mark:hover .site-brand-text {
@@ -69,6 +74,9 @@ body {
   height: 40px;
   flex-shrink: 0;
   border-radius: 10px;
+  object-fit: contain;
+  object-position: center;
+  overflow: visible;
 }
 
 .site-main-wrap {

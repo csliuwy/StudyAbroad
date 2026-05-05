@@ -11,9 +11,6 @@ export function SiteFooter() {
         <p className="site-footer-line site-footer-beian">
           <a href={BEIAN} target="_blank" rel="noopener noreferrer">
             京ICP备15013491号-1
-          </a>{" "}
-          <a href={BEIAN} target="_blank" rel="noopener noreferrer">
-            京ICP备15013491号-13
           </a>
         </p>
       </div>

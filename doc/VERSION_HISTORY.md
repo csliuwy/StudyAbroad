@@ -244,7 +244,7 @@
 
 1. **Logo（使命：游学规划与协作执行）**：矢量标 **`public/brand/studytour-mark.svg`**（512 主标）、**`studytour-mark-sm.svg`**（32 简标）、**`public/favicon.svg`**（标签页）；**`public/apple-touch-icon.png`**（约 192×192，iOS / 主屏）。  
 2. **页眉**：顶栏品牌链使用 **40×40** 标 + 文案。  
-3. **页脚（全站）**：版权与技术支持邮箱 **support@denglu.net.cn**；**京ICP备15013491号-1**、**京ICP备15013491号-13** 链至 **beian.miit.gov.cn**。  
+3. **页脚（全站）**：版权与技术支持邮箱 **support@denglu.net.cn**；**京ICP备15013491号-1** 链至 **beian.miit.gov.cn**（曾含 **-13** 条目，已于 **1.10** 删除）。  
 4. **`index.html`**：`lang="zh-CN"`、**theme-color**、**description**、**favicon** / **apple-touch-icon**。
 
 ### 涉及文件
@@ -288,6 +288,41 @@
 | `frontend/vite.config.ts` | `base: '/'` |
 | `scripts/deploy-static-to-www.sh` | 健康检查提示 |
 | `deploy/studytour-backend.service.example` | 可选 systemd |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
+## 1.10 — Logo 顶栏裁切、多格式 favicon、备案文案
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **Logo**：修正 **`studytour-mark.svg` / `studytour-mark-sm.svg` / `favicon.svg`** 中损坏的 XML 注释（控制字符会导致部分渲染器失败）；**扩大 viewBox 上边距**（`preserveAspectRatio="xMidYMid meet"`），避免弧线与三角在顶栏小尺寸下被裁切。  
+2. **顶栏样式**：**`.site-brand-with-mark`** 设 **`line-height: 0`**，**`.site-logo`** 设 **`object-fit` / `object-position`**，减少内联替换元素与行高导致的上下裁切。  
+3. **地址栏图标**：新增 **`favicon.ico`**（多尺寸）、**`favicon-32x32.png`**；**`index.html`** 优先声明 ICO/PNG，再声明 SVG，以兼容仅支持位图标签页的浏览器；补全 **`apple-touch-icon.png`**（192×192）。  
+4. **页脚备案**：删除文案 **「京ICP备15013491号-13」** 及其链接，保留 **「京ICP备15013491号-1」** 及版权、技术支持邮箱等其余内容。  
+5. **部署脚本**：若存在并已配置的 **`studytour-backend`** systemd 单元，则在静态部署后 **`systemctl restart`**；否则打印说明，提醒手动重启后端。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `frontend/public/brand/studytour-mark.svg` | viewBox / 注释修复 |
+| `frontend/public/brand/studytour-mark-sm.svg` | 同上 |
+| `frontend/public/favicon.svg` | 同上 |
+| `frontend/public/favicon.ico` | 新增 |
+| `frontend/public/favicon-32x32.png` | 新增 |
+| `frontend/public/apple-touch-icon.png` | 新增（生成） |
+| `frontend/index.html` | 多 `link rel="icon"` |
+| `frontend/src/styles.css` | 顶栏 Logo / 品牌文案行高 |
+| `frontend/src/components/SiteFooter.tsx` | 移除 -13 备案 |
+| `scripts/deploy-static-to-www.sh` | 可选后端 restart |
+| `doc/2026-05-05_主页与品牌与备案修正结论.md` | 当日结论摘要 |
 | `doc/VERSION_HISTORY.md` | 本版本记录 |
 
 ### 恢复提示
