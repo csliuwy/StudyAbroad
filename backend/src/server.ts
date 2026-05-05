@@ -35,6 +35,17 @@ const travefyClient = new TravefyClient({
 const publishService = new PublishService(travefyClient, new WetuClient());
 const researchQueue = new ResearchQueue(createSearchProvider());
 
+app.get("/", (_req, res) => {
+  res.type("json").json({
+    service: "studytour-backend",
+    message: "API has no HTML homepage; use the frontend (e.g. Vite on port 5180) or call routes below.",
+    routes: {
+      health: "GET /health",
+      projects: "GET /api/projects"
+    }
+  });
+});
+
 app.get("/health", (_req, res) => {
   res.json({ ok: true, service: "studytour-backend" });
 });

@@ -6,6 +6,10 @@ export default defineConfig({
   server: {
     /** Dedicated port so this app does not share 5173 with other local Vite projects (Windows may allow duplicate binds → empty / wrong page). */
     port: 5180,
-    strictPort: true
+    strictPort: true,
+    /** Allow access via LAN / hostname (e.g. studyabroad.martxdata.com pointing at this machine). */
+    host: true,
+    /** Dev behind Nginx on 80/443: accept `Host` from reverse proxy (Vite 5 host check). */
+    allowedHosts: true
   }
 });

@@ -152,6 +152,90 @@
 
 ---
 
+## 1.5 — 域名访问（studyabroad.martxdata.com）与 API 基址
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **问题**：前端写死 `http://localhost:8080/api` 时，通过域名打开页面后，浏览器仍请求用户本机的 localhost，列表与接口失败。  
+2. **解决**：`frontend/src/apiBase.ts` 的 **`resolveApiBase()`** — 优先 **`VITE_API_BASE_URL`**；开发模式用**当前页面的 hostname + 8080**；生产构建默认同源 **`/api`**（需 Nginx 等把 `/api` 反代到后端）。  
+3. **Vite**：`server.host: true`，便于通过指向本机 IP 的域名访问开发服务（如 `http://studyabroad.martxdata.com:5180`）。  
+4. **访问示例**（DNS 已指向本机时）  
+   - 开发：前端 `http://studyabroad.martxdata.com:5180`，API 自动为 `http://studyabroad.martxdata.com:8080/api`（后端需在本机 8080 监听，防火墙放行）。  
+   - 生产：静态资源 + `/api` 反代到同一域名时，使用 `npm run build` 后的默认 `/api` 即可；若 API 路径不同，设置 **`VITE_API_BASE_URL`**。  
+5. **术语补充（与 1.4 并列）**：经域名访问时，**「系统」** 亦可指 **`http(s)://studyabroad.martxdata.com[:5180]/`**（以实际部署端口为准）。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `frontend/src/apiBase.ts` | `resolveApiBase()` |
+| `frontend/src/pages/OpsHomePage.tsx` | 使用 `resolveApiBase()`；错误提示 |
+| `frontend/src/pages/InternalInformationCollectionPage.tsx` | 使用 `resolveApiBase()` |
+| `frontend/vite.config.ts` | `server.host: true` |
+| `frontend/.env.example` | `VITE_API_BASE_URL` 说明 |
+| `frontend/src/vite-env.d.ts` | `ImportMetaEnv.VITE_API_BASE_URL` |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
+## 1.6 — 域名默认 80 端口（无 :5180）与 Nginx 示例
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **目标**：浏览器访问 **`http://studyabroad.martxdata.com/`**（不显式端口）与生产构建的前端一致；`/api` 反代到本机 **8080** 后端。  
+2. **配置**：`deploy/studyabroad.martxdata.com.conf.example` — **`root` 使用 `/var/www/studyabroad`**（由 `frontend/dist` 拷贝而来，`nginx` 用户可读；勿指向 `/root/...` 否则会 500）。含 **`/api/`**、**`/uploads/`** 反代；注释内另有「经 80 反代到 Vite 5180」可选块。  
+3. **开发模式经 Nginx 走 80**：`resolveApiBase()` 在页面为 **80/443** 时使用同源 **`/api`**，避免仍请求 **`:8080`**。  
+4. **Vite**：`server.allowedHosts: true`，便于 `Host: studyabroad.martxdata.com` 反代到 `npm run dev`。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `deploy/studyabroad.martxdata.com.conf.example` | Nginx 示例 |
+| `frontend/src/apiBase.ts` | 80/443 下 dev 使用 `/api` |
+| `frontend/vite.config.ts` | `allowedHosts` |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
+## 1.7 — 仓库路径改为 `~/code/StudyAbroad` 与静态发布脚本
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **本机/服务器**：仓库目录由 **`…/studyabroad/StudyAbroad`** 迁至 **`…/code/StudyAbroad`**，避免与仓库根同名混淆；**不影响** `http://studyabroad.martxdata.com/`（域名与磁盘路径无关）。  
+2. **发布**：新增 **`scripts/deploy-static-to-www.sh`**（`frontend` 下 `npm run build` → 拷贝至 **`/var/www/studyabroad`** → `chown` → `nginx -t` → `reload`）；根目录 **`npm run deploy:www`** 调用之（需 sudo）。  
+3. **文档**：`doc/README.md` 补充「总结只放 `StudyAbroad/doc`」与「克隆路径 / 域名 / Nginx `root` 对照」说明。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `scripts/deploy-static-to-www.sh` | 构建 + 同步 `/var/www/studyabroad` + reload nginx |
+| `package.json` | `deploy:www` |
+| `README.md` | 建议路径与 `deploy:www` |
+| `doc/README.md` | 路径与域名约定 |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
 ## 版本号约定（建议）
 
 - **1.x**：用户可见功能或默认数据/布局变更。

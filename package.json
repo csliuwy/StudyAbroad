@@ -5,6 +5,7 @@
   "workspaces": ["frontend", "backend"],
   "scripts": {
     "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev"
+    "dev:frontend": "npm --prefix frontend run dev",
+    "deploy:www": "bash scripts/deploy-static-to-www.sh"
   }
 }

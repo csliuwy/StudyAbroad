@@ -1,7 +1,6 @@
 import { FormEvent, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
-const API_BASE = "http://localhost:8080/api";
+import { resolveApiBase } from "../apiBase";
 
 type ProjectSummary = { id: string; name: string };
 type PublishTarget = "travefy" | "wetu" | "file";
@@ -25,7 +24,7 @@ export function OpsHomePage() {
   async function loadProjects(preferredId?: string) {
     setProjectsLoadError(null);
     try {
-      const res = await fetch(`${API_BASE}/projects`);
+      const res = await fetch(`${resolveApiBase()}/projects`);
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}`);
       }
@@ -45,7 +44,9 @@ export function OpsHomePage() {
       }
     } catch (e) {
       setProjects([]);
-      setProjectsLoadError(e instanceof Error ? e.message : "无法加载项目列表（后端是否在 http://localhost:8080 运行？）");
+      setProjectsLoadError(
+        e instanceof Error ? e.message : "无法加载项目列表（后端是否在本机 8080 端口运行，或已设置 VITE_API_BASE_URL？）"
+      );
     }
   }
 
@@ -54,7 +55,7 @@ export function OpsHomePage() {
     if (!newProjectName.trim()) {
       return;
     }
-    const res = await fetch(`${API_BASE}/projects`, {
+    const res = await fetch(`${resolveApiBase()}/projects`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -76,14 +77,14 @@ export function OpsHomePage() {
   }
 
   async function loadDetail(id: string) {
-    const res = await fetch(`${API_BASE}/projects/${id}`);
+    const res = await fetch(`${resolveApiBase()}/projects/${id}`);
     const data = await res.json();
     setDetail(data);
     setPublishes(data.publishes ?? []);
   }
 
   async function loadJobs(id: string) {
-    const res = await fetch(`${API_BASE}/projects/${id}/research-jobs`);
+    const res = await fetch(`${resolveApiBase()}/projects/${id}/research-jobs`);
     setJobs(await res.json());
   }
 
@@ -107,7 +108,7 @@ export function OpsHomePage() {
     if (!projectId || !chatText.trim()) {
       return;
     }
-    await fetch(`${API_BASE}/projects/${projectId}/chat`, {
+    await fetch(`${resolveApiBase()}/projects/${projectId}/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: chatText })
@@ -129,7 +130,7 @@ export function OpsHomePage() {
     }
     const payload = new FormData();
     payload.append("proposal", input.files[0]);
-    await fetch(`${API_BASE}/projects/${projectId}/proposal`, { method: "POST", body: payload });
+    await fetch(`${resolveApiBase()}/projects/${projectId}/proposal`, { method: "POST", body: payload });
     form.reset();
     await loadDetail(projectId);
     await loadJobs(projectId);
@@ -139,7 +140,7 @@ export function OpsHomePage() {
     if (!projectId) {
       return;
     }
-    await fetch(`${API_BASE}/projects/${projectId}/budget/lines`, {
+    await fetch(`${resolveApiBase()}/projects/${projectId}/budget/lines`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -156,7 +157,7 @@ export function OpsHomePage() {
     if (!projectId) {
       return;
     }
-    await fetch(`${API_BASE}/projects/${projectId}/logistics`, {
+    await fetch(`${resolveApiBase()}/projects/${projectId}/logistics`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -172,7 +173,7 @@ export function OpsHomePage() {
     if (!projectId) {
       return;
     }
-    await fetch(`${API_BASE}/projects/${projectId}/runbook`, {
+    await fetch(`${resolveApiBase()}/projects/${projectId}/runbook`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ phase: "pretrip", title: "Verify insurance records" })
@@ -185,7 +186,7 @@ export function OpsHomePage() {
     if (!trimmed) {
       return false;
     }
-    const res = await fetch(`${API_BASE}/projects/${encodeURIComponent(projectIdToRename)}`, {
+    const res = await fetch(`${resolveApiBase()}/projects/${encodeURIComponent(projectIdToRename)}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: trimmed })
@@ -198,7 +199,7 @@ export function OpsHomePage() {
   }
 
   async function deleteProjectById(id: string) {
-    const res = await fetch(`${API_BASE}/projects/${encodeURIComponent(id)}`, { method: "DELETE" });
+    const res = await fetch(`${resolveApiBase()}/projects/${encodeURIComponent(id)}`, { method: "DELETE" });
     if (!res.ok && res.status !== 204) {
       return false;
     }
@@ -210,12 +211,12 @@ export function OpsHomePage() {
     if (!projectId) {
       return;
     }
-    await fetch(`${API_BASE}/projects/${projectId}/publish`, {
+    await fetch(`${resolveApiBase()}/projects/${projectId}/publish`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ target })
     });
-    const res = await fetch(`${API_BASE}/projects/${projectId}/publishes`);
+    const res = await fetch(`${resolveApiBase()}/projects/${projectId}/publishes`);
     setPublishes(await res.json());
   }
 
@@ -514,7 +515,7 @@ function PartnerView({ projectId }: { projectId: string }) {
     if (!projectId) {
       return;
     }
-    fetch(`${API_BASE}/projects/${projectId}/view/partner`)
+    fetch(`${resolveApiBase()}/projects/${projectId}/view/partner`)
       .then((r) => r.json())
       .then(setView);
   }, [projectId]);
@@ -535,7 +536,7 @@ function TravelerView({ projectId }: { projectId: string }) {
     if (!projectId) {
       return;
     }
-    fetch(`${API_BASE}/projects/${projectId}/view/traveler`)
+    fetch(`${resolveApiBase()}/projects/${projectId}/view/traveler`)
       .then((r) => r.json())
       .then(setView);
   }, [projectId]);

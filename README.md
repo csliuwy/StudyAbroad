@@ -2,6 +2,8 @@
 
 Business system scaffold for a B/S study-tour planning and execution platform.
 
+**建议本机路径**：`~/code/StudyAbroad`（父目录名任意；与公网域名 `studyabroad.martxdata.com` 无关）。在 Linux 服务器上同步静态站点到 Nginx：`npm run deploy:www`（需 sudo，见 `scripts/deploy-static-to-www.sh`）。
+
 ## Structure
 
 - `frontend/`: web UI for collaboration, proposal intake, planning, and publishing.

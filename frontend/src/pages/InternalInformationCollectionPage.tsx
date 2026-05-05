@@ -8,9 +8,8 @@ import {
   type MouseEvent as ReactMouseEvent
 } from "react";
 import { Link, useParams } from "react-router-dom";
+import { resolveApiBase } from "../apiBase";
 import type { InternalInfoColumn, InternalInfoLayout, InternalInfoSection } from "./internalInfoLayout";
-
-const API_BASE = "http://localhost:8080/api";
 
 const layoutUrl = `${import.meta.env.BASE_URL}data/internal-info-collection-layout.json`;
 
@@ -587,7 +586,7 @@ export function InternalInformationCollectionPage() {
       return;
     }
     let cancelled = false;
-    fetch(`${API_BASE}/projects/${encodeURIComponent(projectId)}`)
+    fetch(`${resolveApiBase()}/projects/${encodeURIComponent(projectId)}`)
       .then(async (r) => {
         if (!r.ok) {
           throw new Error(r.status === 404 ? "Project not found." : `HTTP ${r.status}`);

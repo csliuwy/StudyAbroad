@@ -1,0 +1,89 @@
+# Example Nginx site: http://studyabroad.martxdata.com/ (port 80, no :5180 in URL)
+#
+# Prereqs:
+#   1) DNS A record: studyabroad.martxdata.com → this server
+#   2) Backend:  cd backend && npm run dev   (or npm start), listening on 8080
+#   3) Frontend:  cd frontend && npm run build
+#
+# Install (Alibaba / RHEL-like):
+#   sudo mkdir -p /var/www/studyabroad && sudo cp -a frontend/dist/. /var/www/studyabroad/
+#   sudo chown -R nginx:nginx /var/www/studyabroad
+#   sudo cp deploy/studyabroad.martxdata.com.conf.example /etc/nginx/conf.d/studyabroad.martxdata.com.conf
+#   sudo nginx -t && sudo systemctl reload nginx
+#
+# Open port 80 in the cloud security group + local firewall if needed.
+#
+# In /etc/nginx/nginx.conf, the catch-all `server { server_name _; ... }` should use
+#   listen 80 default_server;
+#   listen [::]:80 default_server;
+# so this file is selected only when Host matches `studyabroad.martxdata.com`.
+
+server {
+    listen 80;
+    server_name studyabroad.martxdata.com;
+
+    # --- Production UI (must be readable by `nginx` user; not under /root) ---
+    root /var/www/studyabroad;
+    index index.html;
+
+    location = /health {
+        proxy_pass http://127.0.0.1:8080/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8080/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 300s;
+    }
+
+    location /uploads/ {
+        proxy_pass http://127.0.0.1:8080/uploads/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# --- Optional: dev parity (live Vite on 5180 through port 80) ---
+# Uncomment ONLY this `server` block (and comment the one above) if you want `npm run dev`
+# on the server and still use :80 in the browser. HMR needs WebSocket proxy.
+#
+# server {
+#     listen 80;
+#     server_name studyabroad.martxdata.com;
+#
+#     location /api/ {
+#         proxy_pass http://127.0.0.1:8080/api/;
+#         proxy_http_version 1.1;
+#         proxy_set_header Host $host;
+#         proxy_set_header X-Real-IP $remote_addr;
+#         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#         proxy_set_header X-Forwarded-Proto $scheme;
+#     }
+#
+#     location /uploads/ {
+#         proxy_pass http://127.0.0.1:8080/uploads/;
+#         proxy_http_version 1.1;
+#         proxy_set_header Host $host;
+#     }
+#
+#     location / {
+#         proxy_pass http://127.0.0.1:5180;
+#         proxy_http_version 1.1;
+#         proxy_set_header Upgrade $http_upgrade;
+#         proxy_set_header Connection "upgrade";
+#         proxy_set_header Host $host;
+#         proxy_set_header X-Real-IP $remote_addr;
+#         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#         proxy_set_header X-Forwarded-Proto $scheme;
+#     }
+# }
