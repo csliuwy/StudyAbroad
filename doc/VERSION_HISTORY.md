@@ -236,6 +236,37 @@
 
 ---
 
+## 1.8 — 品牌标识、地址栏图标与页脚备案
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **Logo（使命：游学规划与协作执行）**：矢量标 **`public/brand/studytour-mark.svg`**（512 主标）、**`studytour-mark-sm.svg`**（32 简标）、**`public/favicon.svg`**（标签页）；**`public/apple-touch-icon.png`**（约 192×192，iOS / 主屏）。  
+2. **页眉**：顶栏品牌链使用 **40×40** 标 + 文案。  
+3. **页脚（全站）**：版权与技术支持邮箱 **support@denglu.net.cn**；**京ICP备15013491号-1**、**京ICP备15013491号-13** 链至 **beian.miit.gov.cn**。  
+4. **`index.html`**：`lang="zh-CN"`、**theme-color**、**description**、**favicon** / **apple-touch-icon**。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `frontend/public/brand/studytour-mark.svg` | 主标 |
+| `frontend/public/brand/studytour-mark-sm.svg` | 简标 |
+| `frontend/public/favicon.svg` | 浏览器图标 |
+| `frontend/public/apple-touch-icon.png` | 触控图标 |
+| `frontend/src/components/SiteFooter.tsx` | 页脚 |
+| `frontend/src/App.tsx` | 顶栏 Logo、包裹 `site-main-wrap` |
+| `frontend/src/styles.css` | 顶栏标、页脚、整页 flex 布局 |
+| `frontend/index.html` | meta / link |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
 ## 版本号约定（建议）
 
 - **1.x**：用户可见功能或默认数据/布局变更。

@@ -1,8 +1,20 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #15202b;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
@@ -34,6 +46,70 @@ body {
 
 .site-brand-link:hover {
   text-decoration: underline;
+}
+
+.site-brand-with-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-brand-with-mark:hover {
+  text-decoration: none;
+}
+
+.site-brand-with-mark:hover .site-brand-text {
+  text-decoration: underline;
+}
+
+.site-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.site-main-wrap {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  background: #e8ecf1;
+  border-top: 1px solid #d1d9e3;
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.site-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 28px;
+  text-align: center;
+}
+
+.site-footer-line {
+  margin: 0 0 8px;
+}
+
+.site-footer-line:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer a {
+  color: #0f766e;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-beian a {
+  margin: 0 4px;
 }
 
 .site-nav {
