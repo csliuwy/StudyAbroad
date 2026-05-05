@@ -8,3 +8,9 @@ sudo chown -R nginx:nginx /var/www/studyabroad
 sudo nginx -t
 sudo systemctl reload nginx
 echo "OK: dist -> /var/www/studyabroad, nginx reloaded"
+
+if curl -sf --connect-timeout 2 "http://127.0.0.1:8080/health" >/dev/null; then
+  echo "OK: backend /health reachable (API via Nginx should not 502)."
+else
+  echo "WARN: backend not reachable on :8080 — start it (e.g. cd backend && npm run dev) or Nginx /api returns 502."
+fi

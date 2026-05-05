@@ -9,9 +9,10 @@ import {
 } from "react";
 import { Link, useParams } from "react-router-dom";
 import { resolveApiBase } from "../apiBase";
+import { publicUrl } from "../publicUrl";
 import type { InternalInfoColumn, InternalInfoLayout, InternalInfoSection } from "./internalInfoLayout";
 
-const layoutUrl = `${import.meta.env.BASE_URL}data/internal-info-collection-layout.json`;
+const layoutUrl = publicUrl("data/internal-info-collection-layout.json");
 
 const IIC_STORAGE_PREFIX = "studytour:iic:v1:";
 /** Match `.iic-th` / header font for single-line width estimate */

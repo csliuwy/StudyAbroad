@@ -2,8 +2,9 @@ import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import { SiteFooter } from "./components/SiteFooter";
 import { InternalInformationCollectionPage } from "./pages/InternalInformationCollectionPage";
 import { OpsHomePage } from "./pages/OpsHomePage";
+import { publicUrl } from "./publicUrl";
 
-const markSrc = `${import.meta.env.BASE_URL}brand/studytour-mark.svg`;
+const markSrc = publicUrl("brand/studytour-mark.svg");
 
 export function App() {
   return (

@@ -267,6 +267,35 @@
 
 ---
 
+## 1.9 — 静态资源根路径与部署后 502 说明
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **`publicUrl()`**（`frontend/src/publicUrl.ts`）：`public/` 下资源在任意前端路由下均以**站点根路径**解析（如 `/brand/…`、`/data/…`），避免相对路径在 `/projects/…` 下错请求 `/projects/brand/…`。  
+2. **`vite.config.ts`**：显式 **`base: '/'`**。  
+3. **`deploy-static-to-www.sh`**：部署后 **`curl 127.0.0.1:8080/health`**，不可达时提示 **Nginx `/api` 502**（后端未起）。  
+4. **`deploy/studytour-backend.service.example`**：可选 systemd，开机自启 **8080**。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `frontend/src/publicUrl.ts` | 新增 |
+| `frontend/src/App.tsx` | Logo 使用 `publicUrl` |
+| `frontend/src/pages/InternalInformationCollectionPage.tsx` | layout JSON 使用 `publicUrl` |
+| `frontend/vite.config.ts` | `base: '/'` |
+| `scripts/deploy-static-to-www.sh` | 健康检查提示 |
+| `deploy/studytour-backend.service.example` | 可选 systemd |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。
+
+---
+
 ## 版本号约定（建议）
 
 - **1.x**：用户可见功能或默认数据/布局变更。

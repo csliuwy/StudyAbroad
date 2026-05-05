@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  /** Deployed at domain root; keeps asset URLs stable (`/brand/...`, `/data/...`). */
+  base: "/",
   server: {
     /** Dedicated port so this app does not share 5173 with other local Vite projects (Windows may allow duplicate binds → empty / wrong page). */
     port: 5180,
