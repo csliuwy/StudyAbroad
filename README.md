@@ -20,6 +20,7 @@ Business system scaffold for a B/S study-tour planning and execution platform.
 
 - Keep third-party credentials on the server only.
 - Never commit `.env` with real keys.
+- Backend: Helmet headers, configurable CORS (`CORS_ORIGIN`), global + upload rate limits, strict `project_…` id format, proposal type/size limits and temp-file cleanup after ingest. Set `TRUST_PROXY=1` when running behind Nginx. See `backend/.env.example`.
 
 ## Quick Start
 

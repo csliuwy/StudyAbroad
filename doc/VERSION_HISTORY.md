@@ -331,6 +331,42 @@
 
 ---
 
+## 2.0 — 安全加固（HTTP 头、CORS、限流、上传与 projectId）
+
+**日期**：2026-05-05
+
+### 功能 / 范围
+
+1. **Helmet**（关闭 CSP/COEP 以免干扰纯 JSON API）、**可配置 CORS**（`CORS_ORIGIN`；生产默认 `origin: false` 利于同源反代）、**全局限流**（`/health` 跳过）与 **提案上传限流**。  
+2. **`TRUST_PROXY`**：反代后正确识别客户端 IP（限流）。  
+3. **`projectId`**：全路由 **`router.param`** 校验 `project_` + base36，防路径段滥用。  
+4. **Multer**：**类型**（pdf/doc/docx）、**大小**（`PROPOSAL_MAX_BYTES`，默认 12MB 上限 20MB）、单文件；处理完后 **删除临时文件**；`storagePath` 不再持久化真实磁盘路径。  
+5. **输入**：聊天正文、runbook 标题 **最大长度**；生产可通过 **`EXPOSE_API_ROOT=false`** 收缩 `GET /` 信息。  
+6. **`/uploads` 静态**：**禁止点文件**、无目录索引。  
+7. **前端**：`referrer` meta **strict-origin-when-cross-origin**。  
+8. **构建**：`pdf-parse` 补充 **`src/types/pdf-parse.d.ts`**，`tsconfig` 包含 `*.d.ts`。
+
+### 涉及文件
+
+| 路径 | 说明 |
+|------|------|
+| `backend/src/middleware/httpSecurity.ts` | CORS、限流、projectId 校验 |
+| `backend/src/server.ts` | Helmet、trust proxy、错误处理、静态选项 |
+| `backend/src/routes/projects.ts` | Multer、param、unlink、文案文件名净化 |
+| `backend/src/types/pdf-parse.d.ts` | 类型声明 |
+| `backend/tsconfig.json` | include `*.d.ts` |
+| `backend/.env.example` | 安全相关变量 |
+| `backend/package.json` / 根 lock | `helmet`、`express-rate-limit` |
+| `frontend/index.html` | referrer |
+| `README.md` | 安全说明 |
+| `doc/VERSION_HISTORY.md` | 本版本记录 |
+
+### 恢复提示
+
+同 1.1。生产若跨域调 API，必须配置 **`CORS_ORIGIN`**。
+
+---
+
 ## 版本号约定（建议）
 
 - **1.x**：用户可见功能或默认数据/布局变更。

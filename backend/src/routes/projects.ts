@@ -1,6 +1,9 @@
+import fs from "fs/promises";
+import path from "path";
 import express from "express";
 import multer from "multer";
 import { z } from "zod";
+import { isValidProjectId, proposalUploadRateLimiter } from "../middleware/httpSecurity.js";
 import type { ItineraryVersion, StudyTourProject } from "../domain/models.js";
 import { PublishTarget } from "../domain/models.js";
 import { PublishService } from "../services/publishService.js";
@@ -19,7 +22,27 @@ import {
   uid
 } from "../services/store.js";
 
-const upload = multer({ dest: "uploads/" });
+const PROPOSAL_MAX_BYTES = Math.min(
+  20 * 1024 * 1024,
+  Math.max(1024 * 1024, Number(process.env.PROPOSAL_MAX_BYTES ?? 12 * 1024 * 1024))
+);
+
+const upload = multer({
+  dest: "uploads/",
+  limits: { fileSize: PROPOSAL_MAX_BYTES, files: 1 },
+  fileFilter: (_req, file, cb) => {
+    const ext = path.extname(file.originalname).toLowerCase();
+    if (ext === ".pdf" || ext === ".doc" || ext === ".docx") {
+      return cb(null, true);
+    }
+    cb(new Error("Only .pdf, .doc, .docx allowed"));
+  }
+});
+
+function safeProposalFilename(name: string): string {
+  const base = path.basename(name);
+  return base.replace(/[^\w.\u4e00-\u9fff-]+/g, "_").slice(0, 200) || "proposal";
+}
 
 const createProjectSchema = z.object({
   name: z.string().min(1).max(200),
@@ -29,7 +52,7 @@ const createProjectSchema = z.object({
 });
 
 const messageSchema = z.object({
-  text: z.string().min(1)
+  text: z.string().min(1).max(12000)
 });
 
 const publishSchema = z.object({
@@ -142,6 +165,13 @@ function forkItinerary(current: ItineraryVersion, projectId: string): ItineraryV
 
 export function createProjectRouter(researchQueue: ResearchQueue, publishService: PublishService): express.Router {
   const router = express.Router();
+
+  router.param("projectId", (req, res, next, id) => {
+    if (!isValidProjectId(id)) {
+      return res.status(400).json({ error: "invalid project id" });
+    }
+    next();
+  });
 
   router.use((req, res, next) => {
     res.on("finish", () => {
@@ -322,44 +352,56 @@ export function createProjectRouter(researchQueue: ResearchQueue, publishService
     return res.status(202).json({ thread, researchJob: job });
   });
 
-  router.post("/:projectId/proposal", upload.single("proposal"), async (req, res) => {
-    const project = db.projects.get(req.params.projectId);
-    if (!project) {
-      return res.status(404).json({ error: "project not found" });
+  router.post(
+    "/:projectId/proposal",
+    proposalUploadRateLimiter(),
+    upload.single("proposal"),
+    async (req, res) => {
+      const project = db.projects.get(req.params.projectId);
+      if (!project) {
+        return res.status(404).json({ error: "project not found" });
+      }
+      if (!req.file) {
+        return res.status(400).json({ error: "proposal file is required" });
+      }
+
+      const displayName = safeProposalFilename(req.file.originalname);
+      let extractedText: string;
+      try {
+        extractedText = await extractProposalText(req.file.path, req.file.originalname);
+      } catch (e) {
+        extractedText = `Extract error: ${e instanceof Error ? e.message : String(e)}`;
+      } finally {
+        try {
+          await fs.unlink(req.file.path);
+        } catch {
+          /* temp file already removed */
+        }
+      }
+
+      const proposal = {
+        id: uid("proposal"),
+        projectId: project.id,
+        originalName: displayName,
+        storagePath: "(removed after ingest)",
+        extractedText,
+        uploadedAt: now()
+      };
+      db.proposals.set(proposal.id, proposal);
+
+      const thread = ensureThread(project.id);
+      thread.messages.push({
+        id: uid("msg"),
+        role: "assistant",
+        text: `已接收提案《${displayName}》，已提取文本并创建研究任务。`,
+        createdAt: now()
+      });
+
+      const job = createResearchJob(project.id, `Improve proposal: ${displayName}`);
+      researchQueue.enqueue(job);
+      return res.status(202).json({ proposal, researchJob: job });
     }
-    if (!req.file) {
-      return res.status(400).json({ error: "proposal file is required" });
-    }
-
-    let extractedText: string;
-    try {
-      extractedText = await extractProposalText(req.file.path, req.file.originalname);
-    } catch (e) {
-      extractedText = `Extract error: ${e instanceof Error ? e.message : String(e)}`;
-    }
-
-    const proposal = {
-      id: uid("proposal"),
-      projectId: project.id,
-      originalName: req.file.originalname,
-      storagePath: req.file.path,
-      extractedText,
-      uploadedAt: now()
-    };
-    db.proposals.set(proposal.id, proposal);
-
-    const thread = ensureThread(project.id);
-    thread.messages.push({
-      id: uid("msg"),
-      role: "assistant",
-      text: `已接收提案《${req.file.originalname}》，已提取文本并创建研究任务。`,
-      createdAt: now()
-    });
-
-    const job = createResearchJob(project.id, `Improve proposal: ${req.file.originalname}`);
-    researchQueue.enqueue(job);
-    return res.status(202).json({ proposal, researchJob: job });
-  });
+  );
 
   router.get("/:projectId/research-jobs", (req, res) => {
     const jobs = [...db.researchJobs.values()].filter((j) => j.projectId === req.params.projectId);
@@ -403,7 +445,7 @@ export function createProjectRouter(researchQueue: ResearchQueue, publishService
   router.post("/:projectId/runbook", (req, res) => {
     const schema = z.object({
       phase: z.enum(["pretrip", "ontrip", "posttrip"]),
-      title: z.string().min(1)
+      title: z.string().min(1).max(400)
     });
     const parsed = schema.safeParse(req.body);
     if (!parsed.success) {
